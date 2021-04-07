@@ -26,7 +26,7 @@ public class Kerucut extends Lingkaran implements MenghitungRuang{
     public double luasPermukaan() {
         double res = (this.tinggi*this.tinggi)+(this.getJari()*this.getJari());
         double s = Math.sqrt(res);
-        return (Math.PI*this.getJari()*this.getJari())+(Math.PI*this.getJari()*s);
+        return (this.luas())+(Math.PI*this.getJari()*s);
     }
     
 }

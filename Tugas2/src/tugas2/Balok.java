@@ -28,7 +28,7 @@ public class Balok extends PersegiPanjang implements MenghitungRuang {
 
     @Override
     public double luasPermukaan() {
-        return 2*(this.getPanjang()*this.tinggi + this.getPanjang()*this.getLebar() + this.getLebar()*this.tinggi);
+        return 2*(this.getPanjang()*this.tinggi + this.luas() + this.getLebar()*this.tinggi);
     }
     
 }
