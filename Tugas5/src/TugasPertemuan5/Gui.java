@@ -36,6 +36,7 @@ class GUI extends JFrame implements ActionListener, ItemListener {
 
     JButton btnbalok = new JButton("Hitung");
     JButton btnkerucut = new JButton("Hitung");
+    JButton btnreset = new JButton("Reset");
 
     public GUI() {
         setTitle("Mencoba Kombinasi Komponen GUI");
@@ -49,6 +50,7 @@ class GUI extends JFrame implements ActionListener, ItemListener {
         rbkerucut.addItemListener(this);
         btnkerucut.addActionListener(this);
         btnbalok.addActionListener(this);
+        btnreset.addActionListener(this);
 
         setLayout(null);
         add(ltitle);
@@ -62,6 +64,7 @@ class GUI extends JFrame implements ActionListener, ItemListener {
         add(ftinggi);
         add(ltinggi);
         add(btnbalok);
+        add(btnreset);
 
         ltitle.setBounds(115, 10, 120, 20);
         lhitung.setBounds(10, 35, 250, 20);
@@ -73,7 +76,8 @@ class GUI extends JFrame implements ActionListener, ItemListener {
         llebar.setBounds(10, 115, 150, 20);
         ftinggi.setBounds(130, 145, 120, 20);
         ltinggi.setBounds(10, 145, 150, 20);
-        btnbalok.setBounds(115, 180, 100, 20);
+        btnbalok.setBounds(135, 180, 100, 20);
+        btnreset.setBounds(250, 180, 100, 20);
 
         setVisible(true);
     }
@@ -146,6 +150,17 @@ class GUI extends JFrame implements ActionListener, ItemListener {
                 }
 
             }
+        }
+        if (e.getSource() == btnreset) {
+            fpanjang.setText("");
+            flebar.setText("");
+            ftinggi.setText("");
+            fjari.setText("");
+            lluas.setText("");
+            lkeliling.setText("");
+            lluaspermukaan.setText("");
+            lvolume.setText("");
+            
         }
     }
 
